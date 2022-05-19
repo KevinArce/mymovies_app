@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'MyMovies App',
       theme: ThemeData(),
-      home: const SplashScreen(),
+      home: LottieScreen(),
     );
   }
 }

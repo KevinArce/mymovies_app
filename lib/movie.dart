@@ -9,7 +9,7 @@ class Movie {
   late String similar;
 
   Movie(this.id, this.title, this.voteAverage, this.releaseDate, this.overview,
-      this.posterPath, this.similar); //this.movieId,
+      this.posterPath); //this.movieId, this.similar
 
   Movie.fromJson(Map<String, dynamic> parseJson) {
     id = parseJson['id'];
@@ -19,6 +19,6 @@ class Movie {
     releaseDate = parseJson['release_date'];
     overview = parseJson['overview'];
     posterPath = parseJson['poster_path'];
-    similar = parseJson['similar'];
+    //similar = parseJson['similar'];
   }
 }
