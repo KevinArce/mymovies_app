@@ -13,17 +13,17 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen>
     with TickerProviderStateMixin {
-  late AnimationController _coffeeController;
+  late AnimationController _moviesController;
   bool copAnimated = false;
   bool animateCafeText = false;
 
   @override
   void initState() {
     super.initState();
-    _coffeeController = AnimationController(vsync: this);
-    _coffeeController.addListener(() {
-      if (_coffeeController.value > 0.7) {
-        _coffeeController.stop();
+    _moviesController = AnimationController(vsync: this);
+    _moviesController.addListener(() {
+      if (_moviesController.value > 0.7) {
+        _moviesController.stop();
         copAnimated = true;
         setState(() {});
         Future.delayed(const Duration(seconds: 1), () {
@@ -37,7 +37,7 @@ class _SplashScreenState extends State<SplashScreen>
   @override
   void dispose() {
     super.dispose();
-    _coffeeController.dispose();
+    _moviesController.dispose();
   }
 
   @override
@@ -64,8 +64,8 @@ class _SplashScreenState extends State<SplashScreen>
                   visible: !copAnimated,
                   child: Lottie.network(
                       'https://assets3.lottiefiles.com/packages/lf20_CTaizi.json',
-                      controller: _coffeeController, onLoaded: (composition) {
-                    _coffeeController
+                      controller: _moviesController, onLoaded: (composition) {
+                    _moviesController
                       ..duration = composition.duration
                       ..forward().whenComplete(
                         () => Navigator.pushReplacement(
