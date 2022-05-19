@@ -1,6 +1,6 @@
 # mymovies_app
 
-A new Flutter project.
+App using an API (https://developers.themoviedb.org/) and Lottie (https://pub.dev/packages/lottie).
 
 ## Getting Started
 
