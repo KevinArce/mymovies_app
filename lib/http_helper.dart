@@ -4,10 +4,10 @@ import 'dart:io';
 import 'movie.dart';
 
 class HttpHelper {
-  final String urlKey = 'api_key=4d52d8a081f873efe0cce2f7dbfad5fd';
+  final String urlKey = 'api_key=';
   final String urlBase = 'https://api.themoviedb.org/3/movie';
   final String urlSearch =
-      'https://api.themoviedb.org/3/search/movie?api_key=4d52d8a081f873efe0cce2f7dbfad5fd&query=';
+      'https://api.themoviedb.org/3/search/movie?api_key=&query=';
   final String urlPopular = '/popular?';
   final String urlLanguage = '&language=en-US';
   final String urlSimilar = '/similar?';
